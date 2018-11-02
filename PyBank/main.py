@@ -12,7 +12,12 @@ with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
     #skip header so list includes only values
     skipheader = next(csvreader)
-    
+    # now loop through rows
+    for row in csvreader: 
+        months.append(row[0])
+        net_profit.append(row[1])
+        
+
 
 
 
