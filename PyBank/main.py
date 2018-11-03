@@ -17,9 +17,9 @@ with open(csvpath, newline='') as csvfile:
         months.append(row[0])
         net_profit.append(int(row[1])
     # loop through the length of the list
-    for i in list(len(net_profit)):
+    for i in range(1, len(net_profit)) 
         #make a list comprised of the profit changes between months
-        monthly_change.append(net_profit(i+1)-net_profit(i))
+        monthly_change.append((int(net_profit[i+1]))-(int(net_profit[1]))
 # find monthly max and min
 increase_max = max(monthly_change)
 decrease_max = min(monthly_change)
