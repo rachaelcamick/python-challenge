@@ -6,7 +6,7 @@ csvpath = os.path.join("budget_data")
 # make empty lists
 months = []
 net_profit =[]
-monthly_profit_delta = []
+monthly_change = []
 #open file
 with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
@@ -18,5 +18,7 @@ with open(csvpath, newline='') as csvfile:
         net_profit.append(row[1])
     # loop through the length of the list
     for i in range(len(net_profit)):
-        monthly_profit_delta.append(net_profit(i+1)-net_profit(i))
-    
+        monthly_change.append(net_profit(i+1)-net_profit(i))
+increase_max = max(monthly_change)
+decrease_max = min(monthly_change)
+
