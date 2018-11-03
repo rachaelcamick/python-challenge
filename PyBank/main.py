@@ -31,6 +31,8 @@ print("Financial Analysis")
 print(f"Total Months: {len(months)}")
 print(f"Total: ${sum(net_profit)}")
 print(f"Average Change: {sum(monthly_change)/len(monthly_change)}")
-print(f"Greatest Increase in Profits: {months(increase_month)} ")
+print(f"Greatest Increase in Profits: {months(increase_month)} ${str(increase_max)}")
+print(f"Greatest Decrease in Profits: {months(decrease_max)} ${str(decrease_max)}")
+
 
 
