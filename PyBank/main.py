@@ -15,7 +15,7 @@ with open(csvpath, newline='') as csvfile:
     # loop through rows in the data file
     for row in csvreader: 
         months.append(row[0])
-        net_profit.append(row[1])
+        net_profit.append(int(row[1])
     # loop through the length of the list
     for i in list(len(net_profit)):
         #make a list comprised of the profit changes between months
