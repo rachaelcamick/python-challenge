@@ -26,5 +26,11 @@ decrease_max = min(monthly_change)
 # identify the month based on the index
 increase_month = monthly_change.index(max(monthly_change))
 decrease_month = monthly_change.index(min(monthly_change))
+#print statements
+print("Financial Analysis")
+print(f"Total Months: {len(months)}")
+print(f"Total: ${sum(net_profit)}")
+print(f"Average Change: {sum(monthly_change)/len(monthly_change)}")
+print(f"Greatest Increase in Profits: {months(increase_month)} ")
 
 
