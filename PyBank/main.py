@@ -35,13 +35,13 @@ print(f"Greatest Decrease in Profits: {months[decrease_month]} ${[decrease_max]}
 
 #generate text files
 output_path = os.path.join("PyBank_Analysis.txt")
-with open(output_path, "w", newline='') as csvfile:
+with open(output_path, "w") as csvfile:
     writer = csv.writer(csvfile)
     #First row
-    writer.writerow("Financial Analysis")
+    writer.writerow(["Financial Analysis"])
     #Second row
-    writer.writerow(f"Total Months: {len(months)}")
-    writer.writerow(f"Net Profit/Losses: ${sum(net_profit)}")
-    writer.writerow(f"Average Change: ${sum(monthly_change)/len(monthly_change)}")
-    writer.writerow(f"Greatest Increase in Profits: {months[increase_month]} ${[increase_max]}")
-    writer.writerow(f"Greatest Decrease in Profits: {months[decrease_month]} ${[decrease_max]}")
+    writer.writerow([f"Total Months: {len(months)}"])
+    writer.writerow([f"Net Profit/Losses: ${sum(net_profit)}"])
+    writer.writerow([f"Average Change: ${sum(monthly_change)/len(monthly_change)}"])
+    writer.writerow([f"Greatest Increase in Profits: {months[increase_month]} ${[increase_max]}"])
+    writer.writerow([f"Greatest Decrease in Profits: {months[decrease_month]} ${[decrease_max]}"])
