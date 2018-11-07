@@ -55,6 +55,19 @@ print(f"Li: {Li_percent:.3f}% ({Li_total})")
 print(f"O'Tooley: {Otooley_percent:.3f}% ({Otooley_total})")
 print(f"Winner: {winner}")
 
+#generate text files
+output_path = os.path.join("PyPoll_Analysis.txt")
+with open(output_path, "w") as csvfile:
+    writer = csv.writer(csvfile)
+    #First row
+    writer.writerow(["Election Results"])
+    #Second row
+    writer.writerow(f"Total Votes: {len(candidate_raw_list)}")
+    writer.writerow(f"Khan: {Khan_percent:.3f}% ({Khan_total})")
+    writer.writerow(f"Correy: {Correy_percent:.3f}% ({Correy_total})")
+    writer.writerow(f"Li: {Li_percent:.3f}% ({Li_total})")
+    writer.writerow(f"O'Tooley: {Otooley_percent:.3f}% ({Otooley_total})")
+    writer.writerow(f"Winner: {winner}")
 
 
 
